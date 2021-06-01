@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}
+ {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="bg-color pb-5 pt-5">
+	<div class="container pt-3 mt-5 pb-5" style="max-width:1000px;">
+
+
+		<div class="row">
+			<div class="col-md-8 h-auto">
+				<br>
+				<p class="display-3 font-weight-bold">URL Shortener</p>
+				<p class="h2">Short Your Links</p>
+				<p class="text-light" style="font-size: 20px;">A URL shortener built with powerful tools to help you grow and protect your brand.</p>
+				<br><br>
+				<button class="btn  btn-primary btn-lg mt-3">Let's Get Started</button>
+			</div>
+			<div class="col-md-4 h-auto">
+				<!-- <img src="{% static 'img/big.png' %}" alt="" class="w-100"> -->
+			</div>
+		</div>
+
+
+	</div>
+</div>
+	<div class="shortener p-2 pt-5 pb-5 ">
+
+
+	<div class="container p-0" style="max-width:1000px">
+		<div class="p-3">
+			<form id="post-form" class="row" method="POST" >
+				{% csrf_token %}
+				<!-- {{form.as_p}} -->
+				<div class="col-md-9 p-2">
+					<input class="form-control btn shadsow  btn-lg w-100" type="text" id="url" name="url" placeholder="Enter your URL" style="height: 50px;">
+				</div>
+				<div class="text-left col-md-3 p-2">
+					<input class="btn btn-primary btn-lg w-100 h-100 shadow" type="submit" id="shortenButton" value="Shorten">
+					<input class="btn btn-success btn-lg w-100 h-100 shadow" onclick="copyToClipboard('#url')" id="copyButton" value="Copy" style="display: none;">
+				</div>
+			</form> 
+		</div>
+ 
+	</div>
+</div>
+
+ 
+
+<div class="bg-white ">
+	<div class="container py-5" style="max-width: 900px;">
+	  <div class="row align-items-center mb-5">
+		<div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+		  <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+		  <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+		</div>
+		<!-- <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div> -->
+	  </div>
+	  <div class="row align-items-center">
+		<!-- <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div> -->
+		<div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+		  <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+		  <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+		</div>
+	  </div>
+	</div>
+  </div>
+   
+  
+  
+  <footer class="bg-light pb-5">
+	<div class="container text-center">
+	  <p class="font-italic text-muted mb-0">&copy; Copyrights Company.com All rights reserved.</p>
+	</div>
+  </footer>
+   
+
+{% endblock %}

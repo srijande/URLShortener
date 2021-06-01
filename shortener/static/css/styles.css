@@ -1,0 +1,49 @@
+ :root {
+  --color : #289154;
+  --nav : #080e25e0;
+ }
+
+body {
+
+  background-color: #272222; 
+  background: url(/ZTHMgF) 0 / cover fixed;
+}
+
+ .shortener { 
+
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar {
+    background-color: var(--nav);
+    color:var(--color);
+    backdrop-filter: blur(10px);
+  }
+
+  .bg-color {
+    
+    background-color: var(--color);
+  }
+  #url {
+    box-shadow: 0 0px 15px 0 var(--color);
+  }
+  
+
+  
+.colors > li:nth-child(1) {
+  background-color: #2ecc71;
+}
+.colors > li:nth-child(2) {
+  background-color: #D64A4B;
+}
+.colors > li:nth-child(3) {
+  background-color: #8e44ad;
+}
+.colors > li:nth-child(4) {
+  background-color: #46a1de;
+}
+.colors > li:nth-child(5) {
+  background-color: #bdc3c7;
+}
+
+  
